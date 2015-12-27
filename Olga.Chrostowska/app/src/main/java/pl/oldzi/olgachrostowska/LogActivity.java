@@ -28,31 +28,31 @@ public class LogActivity extends AppCompatActivity {
         Button button = (Button) findViewById(R.id.logBut);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                if (isMail() && isPass())
-                {
-                    Toast.makeText(LogActivity.this, "You're logged in", Toast.LENGTH_SHORT).show();
-                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                    sharedPreferences.edit().putString(getString(R.string.activity_to_launch), "MAIN_ACTIVITY").apply();
-                    Intent intent = new Intent(LogActivity.this, MainActivity.class);
-                    startActivity(intent);
+               if (isMail() && isPass())
+               {
+                   Toast.makeText(LogActivity.this, "You're logged in", Toast.LENGTH_SHORT).show();
+                   SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                   sharedPreferences.edit().putString(getString(R.string.activity_to_launch), "MAIN_ACTIVITY").apply();
+                   Intent intent = new Intent(LogActivity.this, MainActivity.class);
+                   startActivity(intent);
 
-                    finish();
+                   finish();
 
-                } else {
-                    TextView passFlake = (TextView) findViewById(R.id.passFlake);
-                    TextView emailFlake = (TextView) findViewById(R.id.emailFlake);
-                    passFlake.setVisibility(View.INVISIBLE);
-                    emailFlake.setVisibility(View.INVISIBLE);
-                    Toast.makeText(LogActivity.this, "You've entered invalid data", Toast.LENGTH_SHORT).show();
-                    if (isPass() == false && isMail() == false) {
-                        emailFlake.setVisibility(View.VISIBLE);
-                        passFlake.setVisibility(View.VISIBLE);
-                    } else if (!isPass()) {
-                        passFlake.setVisibility(View.VISIBLE);
-                    } else if (isMail() == false) {
-                        emailFlake.setVisibility(View.VISIBLE);
-                    }
-                }
+               } else {
+                   TextView passFlake = (TextView) findViewById(R.id.passFlake);
+                   TextView emailFlake = (TextView) findViewById(R.id.emailFlake);
+                   passFlake.setVisibility(View.INVISIBLE);
+                   emailFlake.setVisibility(View.INVISIBLE);
+                   Toast.makeText(LogActivity.this, "You've entered invalid data", Toast.LENGTH_SHORT).show();
+                   if (isPass() == false && isMail() == false) {
+                       emailFlake.setVisibility(View.VISIBLE);
+                       passFlake.setVisibility(View.VISIBLE);
+                   } else if (!isPass()) {
+                       passFlake.setVisibility(View.VISIBLE);
+                   } else if (isMail() == false) {
+                       emailFlake.setVisibility(View.VISIBLE);
+                   }
+               }
             }
         });
 

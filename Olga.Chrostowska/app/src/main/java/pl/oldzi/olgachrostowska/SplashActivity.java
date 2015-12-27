@@ -40,16 +40,18 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-                String activityToLaunch = sharedPreferences.getString(getString(R.string.activity_to_launch), "LOG_ACTIVITY");
+                sharedPreferences.edit().putString(getString(R.string.activity_to_launch), "MAIN_ACTIVITY").apply();
+                String activityToLaunch = sharedPreferences.getString(getString(R.string.activity_to_launch), " hhuh");
                 Intent intent;
                 switch(activityToLaunch){
                     case "MAIN_ACTIVITY": intent = new Intent(SplashActivity.this, MainActivity.class);
                         startActivity(intent);
-                        break;
+                         break;
                     case "LOG_ACTIVITY": intent = new Intent(SplashActivity.this, LogActivity.class);
                         startActivity(intent);
                         break;
                     default: break;}
+
 
                 finish();
             }

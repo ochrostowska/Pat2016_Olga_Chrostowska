@@ -1,0 +1,54 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:background="#1a237e"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp">
+
+        <ImageView
+            android:id="@+id/jsonImageThumbnail"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/placeholder"
+            android:layout_marginBottom="5dp"
+
+            />
+
+
+        <TextView
+            android:id="@+id/descTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="13dp"
+            android:text="bubu"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/jsonImageThumbnail"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:gravity="center_horizontal"
+            android:background="#304ffe"/>
+        <TextView
+            android:id="@+id/urlTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="9dp"
+            android:text="bubu"
+            android:textColor="#ffffff"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:gravity="center_horizontal"
+            android:background="#3d5afe"
+            android:layout_below="@+id/descTextView"
+            />
+
+    </RelativeLayout>
+</LinearLayout>

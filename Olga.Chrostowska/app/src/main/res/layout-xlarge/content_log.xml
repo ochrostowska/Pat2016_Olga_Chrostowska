@@ -97,7 +97,7 @@
         android:id="@+id/emailFlake"
         android:textColor="@color/colorAccent"
         android:textSize="50dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         android:layout_alignTop="@+id/emailEditText"
         android:layout_toLeftOf="@+id/emailEditText"
         android:layout_toStartOf="@+id/emailEditText" />
@@ -110,7 +110,7 @@
         android:id="@+id/passFlake"
         android:textColor="@color/colorAccent"
         android:textSize="50dp"
-        android:visibility="visible"
+        android:visibility="invisible"
         android:layout_below="@+id/emailEditText"
         android:layout_alignLeft="@+id/emailFlake"
         android:layout_alignStart="@+id/emailFlake" />
