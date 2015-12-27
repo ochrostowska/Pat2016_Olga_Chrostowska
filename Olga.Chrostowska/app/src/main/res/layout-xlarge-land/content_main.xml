@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="15dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="pl.oldzi.olgachrostowska.MainActivity"
+    android:background="#1a237e"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❆"
+        android:id="@+id/centerFlake"
+        android:textSize="150dp"
+        android:textColor="#ffffff"
+        android:layout_above="@+id/text1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Well, the snow has nothing to do with our app..."
+        android:textAlignment="center"
+        android:textColor="#304ffe"
+        android:textSize="30dp"
+        android:layout_above="@+id/text2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp" />
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="But there&apos;s no snow in our beautiful country"
+        android:textAlignment="center"
+        android:textColor="#3d5afe"
+        android:textSize="35dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/text3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="So let&apos;s make it frosty! :)"
+        android:textAlignment="center"
+        android:textColor="#8c9eff"
+        android:textSize="55dp"
+        android:layout_marginTop="52dp"
+        android:layout_below="@+id/text2"
+        android:layout_centerHorizontal="true" />
+
+
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❆"
+        android:id="@+id/rightMedFlake"
+        android:textSize="110dp"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/centerFlake"
+        android:layout_toRightOf="@+id/centerFlake"
+        android:layout_toEndOf="@+id/centerFlake"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❆"
+        android:id="@+id/leftMedFlake"
+        android:textSize="110dp"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/centerFlake"
+        android:layout_toLeftOf="@+id/centerFlake"
+        android:layout_marginRight="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❆"
+        android:id="@+id/rightSmallFlake"
+        android:textSize="80dp"
+        android:textColor="#ffffff"
+        android:layout_alignTop="@+id/leftSmallFlake"
+        android:layout_toRightOf="@+id/rightMedFlake"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="❆"
+        android:id="@+id/leftSmallFlake"
+        android:textSize="80dp"
+        android:textColor="#ffffff"
+        android:layout_toLeftOf="@id/leftMedFlake"
+        android:layout_alignBottom="@+id/leftMedFlake"
+        android:layout_marginRight="30dp"
+        />
+
+</RelativeLayout>
