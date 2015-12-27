@@ -1,8 +1,10 @@
 package pl.oldzi.olgachrostowska;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -37,8 +39,18 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                String activityToLaunch = sharedPreferences.getString(getString(R.string.activity_to_launch), "LOG_ACTIVITY");
+                Intent intent;
+                switch(activityToLaunch){
+                    case "MAIN_ACTIVITY": intent = new Intent(SplashActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        break;
+                    case "LOG_ACTIVITY": intent = new Intent(SplashActivity.this, LogActivity.class);
+                        startActivity(intent);
+                        break;
+                    default: break;}
+
                 finish();
             }
         }, SPLASH_TIME);

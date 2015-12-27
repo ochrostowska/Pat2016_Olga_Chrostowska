@@ -1,8 +1,14 @@
 package pl.oldzi.olgachrostowska;
+
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -10,7 +16,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = (Button) findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                    SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+                    sharedPreferences.edit().putString(getString(R.string.activity_to_launch), "LOG_ACTIVITY").apply();
+                    Intent intent = new Intent(MainActivity.this, LogActivity.class);
+                    startActivity(intent);
 
+                    finish();
+
+
+            }
+        });
 
 
     }

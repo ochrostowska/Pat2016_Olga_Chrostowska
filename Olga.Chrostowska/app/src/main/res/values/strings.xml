@@ -2,5 +2,6 @@
     <string name="app_name">Olga.Chrostowska</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_splash">SplashActivity</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_log">Sign in</string>
+    <string name="activity_to_launch">LOG_ACTIVITY</string>
 </resources>
