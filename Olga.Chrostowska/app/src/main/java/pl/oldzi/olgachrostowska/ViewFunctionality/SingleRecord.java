@@ -1,4 +1,4 @@
-package pl.oldzi.olgachrostowska;
+package pl.oldzi.olgachrostowska.ViewFunctionality;
 
 public class SingleRecord {
 
